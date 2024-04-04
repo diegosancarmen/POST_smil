@@ -41,7 +41,11 @@ the hello world script now by typing the following:
 
 '''
 
-from smil_webuser.serialization import load_model
+import sys
+import os
+sys.path.append(os.path.abspath('/home/coeguest/hdelacruz/DAIP/Experiments_2024/042024/POST_smil/smil/smil_webuser'))
+
+from serialization import load_model
 import numpy as np
 
 ## Load SMIL model
@@ -62,4 +66,4 @@ with open( outmesh_path, 'w') as fp:
         fp.write( 'f %d %d %d\n' %  (f[0], f[1], f[2]) )
 
 ## Print message
-print '..Output mesh saved to: ', outmesh_path 
+print('..Output mesh saved to: ', outmesh_path )
